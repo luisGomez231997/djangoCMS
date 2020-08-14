@@ -1,0 +1,6 @@
+To run a projecto clone repo https://github.com/luisGomez231997/djangoCMS.git
+access to the folder dir and excute pipenv install
+then code pipenv shell
+in folder mysite, excute python manage.py runserver
+acces a localhost:8000
+login with luis, job222628
