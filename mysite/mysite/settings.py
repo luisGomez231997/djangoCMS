@@ -1,5 +1,8 @@
+import os
 import os  # isort:skip
-gettext = lambda s: s
+def gettext(s): return s
+
+
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
 Django settings for mysite project.
@@ -13,7 +16,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,17 +30,13 @@ SECRET_KEY = '92=*!w7m*ktg09jfo)&ugn22*)s2m&2hlbta5wgh@2k=lqw65t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 
-
-
-
 ROOT_URLCONF = 'mysite.urls'
-
 
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
@@ -46,8 +44,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-
 
 
 # Password validation
@@ -100,7 +96,7 @@ SITE_ID = 1
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'mysite', 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'mysite', 'templates'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -183,12 +179,12 @@ INSTALLED_APPS = [
 ]
 
 LANGUAGES = (
-    ## Customize this
+    # Customize this
     ('es', gettext('es')),
 )
 
 CMS_LANGUAGES = {
-    ## Customize this
+    # Customize this
     1: [
         {
             'code': 'es',
@@ -206,7 +202,7 @@ CMS_LANGUAGES = {
 }
 
 CMS_TEMPLATES = (
-    ## Customize this
+    # Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
@@ -221,12 +217,19 @@ CMS_PLACEHOLDER_CONF = {}
 DATABASES = {
     'default': {
         'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'localhost',
-        'NAME': 'project.db',
+        'NAME': 'djangocms',
         'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
+        'PORT': '5432',
+        'USER': 'postgres'
+        # 'CONN_MAX_AGE': 0,
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'HOST': 'localhost',
+        # 'NAME': 'project.db',
+        # 'PASSWORD': '',
+        # 'PORT': '',
+        # 'USER': ''
     }
 }
 
