@@ -1,0 +1,14 @@
+{% load cms_tags menu_tags cache  %}
+
+
+{% for child in children %}
+<a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="nav-link">
+    {{ child.get_menu_title }}</a>
+{% if child.children %}
+<nav class="nav nav-pills nav-fill active">
+    {% show_menu from_level to_level extra_inactive extra_active template '' '' child %}
+</nav>
+{% endif %}
+</a>
+
+{% endfor %}

@@ -1,0 +1,339 @@
+{% load cms_tags menu_tags sekizai_tags static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!--Head Html-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}This is my new project home page{% endblock title %}</title>
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/media_query.css">
+    <!--Tags to allow system render to css propieties-->
+    {% render_block "css" %}
+</head>
+<!--Body Html-->
+
+<body>
+    {% cms_toolbar %}
+    {% block content %}
+
+    <!--Header-->
+    <header>
+        <!--Header container-->
+        <div class="container">
+            <!--Banner-->
+            <div class="row mb-3" id="banner">
+                {% placeholder "header"%}
+               
+            </div>
+
+            <!--Navbar container-->
+            <div class="row mb-5 justify-content-center" id="navbartop">
+                <nav class="nav nav-pills nav-fill">
+                    <!--{% show_menu 0 100 100 100 %}-->
+                    <a href="#" class="nav-link active">INICIO</a>
+                    <a href="#" class="nav-link">SERVICIOS</a>
+                    <a href="#" class="nav-link">REVISION</a>
+                    <a href="#" class="nav-link">ACERCA DE NOSOTROS</a>
+                    <a href="#" class="nav-link">AGENDA TU CITA</a>
+                    <a href="#" class="nav-link">PAGOS EN LINEA</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        <!--Body-->
+        <main>
+            <div class="container-md">
+
+                <!--Info Principal Secction-->
+                <div class="row">
+                    <div class="col-11">
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                                {% placeholder "banner"  %}
+                            </div>
+                        </div>
+                    </div>
+                    <!--Bar Social Icons -->
+                    <div class="col-1">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <img src="..." class="mr-3" alt="...">
+                                <div class="media-body">
+                                    {% placeholder "social-media" %}
+                                </div>
+                            </li>
+                            <li class="media my-4">
+                                <img src="..." class="mr-3" alt="...">
+                                <div class="media-body">
+                                    {% placeholder "social-media" %}
+                                </div>
+                            </li>
+                            <li class="media">
+                                <img src="..." class="mr-3" alt="...">
+                                <i class="fab fa-facebook-square"></i>
+                                <div class="media-body">
+                                </div>
+                            </li>
+                            <li class="media my-4">
+                                <img src="..." class="mr-3" alt="...">
+                                <i class="fab fa-facebook-square"></i>
+                                <div class="media-body">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Applications Secctions-->
+                <div class="row containerapps">
+                    <!--cad app 1-->
+
+                    <div class="col-2 p-2">
+                        <div class="card cardapp">
+                            <img src="../static/assets/img/img-templates/rtm.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                {% placeholder "body-apps" %}
+                                <a href="#" class="btn btn-primary btn-block">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 p-2">
+                        <div class="card cardapp">
+                            <img src="../static/assets/img/img-templates/rtm.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <a href="#" class="btn btn-primary btn-block">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 p-2">
+                        <div class="card cardapp">
+                            <img src="../static/assets/img/img-templates/rtm.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <a href="#" class="btn btn-primary btn-block">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 p-2">
+                        <div class="card cardapp">
+                            <img src="../static/assets/img/img-templates/rtm.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <a href="#" class="btn btn-primary btn-block">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 p-2">
+                        <div class="card cardapp">
+                            <img src="../static/assets/img/img-templates/rtm.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <a href="#" class="btn btn-primary btn-block">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 p-2">
+                        <div class="card cardapp">
+                            <img src="../static/assets/img/img-templates/rtm.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <a href="#" class="btn btn-primary btn-block">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--News Secctions-->
+                <div class="container-fluid pt-5 justify-content-around">
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-dark text-left font-weight-bold"
+                                                type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
+                                                Quienes Somos?
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                            dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                            tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                            wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                                            synth nesciunt you probably haven't heard of them accusamus labore
+                                            sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                Collapsible Group Item #2
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                            dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                            tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                            wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                                            synth nesciunt you probably haven't heard of them accusamus labore
+                                            sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Quienes Somos?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                            dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                            tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                            wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                                            synth nesciunt you probably haven't heard of them accusamus labore
+                                            sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="font-weight-bold">
+                                News
+                                <hr>
+                            </h3>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small>3 days ago</small>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Media object</h5>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                            ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                            viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+                                            lacinia congue felis in faucibus.
+                                        </div>
+                                        <img src="../static/assets/img/img-templates/calendar.png" class="ml-3"
+                                            alt="...">
+                                    </div>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action ">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small>3 days ago</small>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Media object</h5>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                            ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                            viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+                                            lacinia congue felis in faucibus.
+                                        </div>
+                                        <img src="../static/assets/img/img-templates/calendar.png" class="ml-3"
+                                            alt="...">
+                                    </div>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action ">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List group item heading</h5>
+                                        <small>3 days ago</small>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Media object</h5>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                            ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                            viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+                                            lacinia congue felis in faucibus.
+                                        </div>
+                                        <img src="../static/assets/img/img-templates/calendar.png" class="ml-3"
+                                            alt="...">
+                                    </div>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </main>
+
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50 mt-5">
+            <div class="container text-center">
+                <small>Copyright &copy; Your Website</small>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+        {% endblock content %}
+
+    </body>
+
+</html>
+
